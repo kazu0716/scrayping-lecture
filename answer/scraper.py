@@ -44,6 +44,7 @@ def main():
         tag_print(container.find("p"))
         for tag in container.find_all("a"):
             tag_print(tag)
+        logger.debug("finished scrayping.")
 
     except Exception as e:
         logger.debug(e)
