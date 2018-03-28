@@ -11,7 +11,7 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 logger = getLogger(__name__)
 handler = StreamHandler()
-handler.setFormatter(logging.Formatter('%(asctime)s: %(message)s', datefmt='%Y/%m/%d %I:%M:%S'))
+handler.setFormatter(logging.Formatter('%(asctime)s: %(message)s', datefmt='%Y/%m/%d %H:%M:%S'))
 handler.setLevel(DEBUG)
 logger.setLevel(DEBUG)
 logger.addHandler(handler)
@@ -39,10 +39,10 @@ def crawler(config):
         user.send_keys(user_id)
         sleep(1)
 
-        pass_ = config.get('general', 'password')
-        logger.debug("input password ".format(pass_))
+        password = config.get('general', 'password')
+        logger.debug("input password ".format(password))
         pass_ = driver.find_element_by_xpath('//*[@id="id_password"]')
-        pass_.send_keys(pass_)
+        pass_.send_keys(password)
         sleep(3)
 
         logger.debug("clicked login button")
@@ -51,7 +51,7 @@ def crawler(config):
         logger.debug("clicked ユーザ")
         driver.find_element_by_xpath('//*[@id="side-panel"]/div[1]/ul/li[1]/ul/li[1]/a').click()
         sleep(3)
-        logger.debug("")
+        logger.debug("finished")
 
     except Exception as e:
         logger.debug(e)

@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <meta content="text/html; charset=utf-8" http-equiv="Content-type" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <meta content="" name="keywords" />
-  <meta content="" name="description" />
-  <title>ホーム | Mezzanine</title>
-  <link href="/static/img/favicon.ico" rel="shortcut icon" />
-  <link href="/blog/feeds/rss/" rel="alternate" title="RSS" type="application/rss+xml" />
-  <link href="/blog/feeds/atom/" rel="alternate" title="Atom" type="application/atom+xml" />
-  <link href="/static/css/bootstrap.css" rel="stylesheet" />
-  <link href="/static/css/mezzanine.css" rel="stylesheet" />
-  <link href="/static/css/bootstrap-theme.css" rel="stylesheet" />
-  <script src="/static/mezzanine/js/jquery-1.8.3.min.js"></script>
-  <script src="/static/js/bootstrap.js"></script>
-  <script src="/static/js/bootstrap-extras.js"></script>
-  <!--[if lt IE 9]>
+<meta content="text/html; charset=utf-8" http-equiv="Content-type"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="" name="keywords"/>
+<meta content="" name="description"/>
+<title>ホーム | Mezzanine</title>
+<link href="/static/img/favicon.ico" rel="shortcut icon"/>
+<link href="/blog/feeds/rss/" rel="alternate" title="RSS" type="application/rss+xml"/>
+<link href="/blog/feeds/atom/" rel="alternate" title="Atom" type="application/atom+xml"/>
+<link href="/static/css/bootstrap.css" rel="stylesheet"/>
+<link href="/static/css/mezzanine.css" rel="stylesheet"/>
+<link href="/static/css/bootstrap-theme.css" rel="stylesheet"/>
+<script src="/static/mezzanine/js/jquery-1.8.3.min.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/bootstrap-extras.js"></script>
+<!--[if lt IE 9]>
 <script src="/static/js/html5shiv.js"></script>
 <script src="/static/js/respond.min.js"></script>
 <![endif]-->
 </head>
-
 <body id="body">
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
 <span class="sr-only">Toggle Navigation</span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-        <a class="navbar-brand" href="/">Mezzanine</a>
-        <p class="navbar-text visible-lg">オープンソースCMS</p>
-      </div>
-      <div class="navbar-collapse collapse">
-        <form action="/search/" class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input class="form-control" name="q" placeholder="検索" type="text" value="" />
-          </div>
-          <div class="form-group">
-            <select class="form-control" name="type">
+<a class="navbar-brand" href="/">Mezzanine</a>
+<p class="navbar-text visible-lg">オープンソースCMS</p>
+</div>
+<div class="navbar-collapse collapse">
+<form action="/search/" class="navbar-form navbar-right" role="search">
+<div class="form-group">
+<input class="form-control" name="q" placeholder="検索" type="text" value=""/>
+</div>
+<div class="form-group">
+<select class="form-control" name="type">
 <option value="">全て</option>
 <option value="blog.BlogPost">
             ブログ投稿
@@ -50,122 +48,78 @@
             ページ
         </option>
 </select>
-          </div>
-          <input class="btn btn-default" type="submit" value="移動" />
-        </form>
-        <ul class="nav navbar-nav">
-          <li class="active" id="dropdown-menu-home"><a href="/">ホーム</a></li>
-          <li class="dropdown " id="about"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="/about/">
+</div>
+<input class="btn btn-default" type="submit" value="移動"/>
+</form>
+<ul class="nav navbar-nav"><li class="active" id="dropdown-menu-home"><a href="/">ホーム</a></li><li class="dropdown " id="about"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="/about/">
             About
-            <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class=" " id="about-team"><a href="/about/team/">Team</a></li>
-              <li class=" " id="about-history"><a href="/about/history/">History</a></li>
-            </ul>
-          </li>
-          <li class=" " id="blog"><a href="/blog/">
+            <b class="caret"></b></a><ul class="dropdown-menu"><li class=" " id="about-team"><a href="/about/team/">Team</a></li><li class=" " id="about-history"><a href="/about/history/">History</a></li></ul></li><li class=" " id="blog"><a href="/blog/">
             Blog
-
-        </a></li>
-          <li class=" " id="gallery"><a href="/gallery/">
+            
+        </a></li><li class=" " id="gallery"><a href="/gallery/">
             Gallery
-
-        </a></li>
-          <li class="dropdown " id="contact"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="/contact/">
+            
+        </a></li><li class="dropdown " id="contact"><a class="dropdown-toggle disabled" data-toggle="dropdown" href="/contact/">
             Contact
-            <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li class=" " id="contact-legals"><a href="/contact/legals/">Legals</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <h1>ホーム</h1>
-    <ul class="breadcrumb">
-      <li class="active">ホーム</li>
-    </ul>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-2 left">
-        <div class="panel panel-default tree">
-          <ul class="nav nav-list navlist-menu-level-0">
-            <li class="active" id="tree-menu-home"><a href="/">ホーム</a></li>
-            <li class=" " id="tree-menu-about"><a href="/about/">About</a>
-              <ul class="nav nav-list navlist-menu-level-1">
-                <li class=" " id="tree-menu-about-team"><a href="/about/team/">Team</a></li>
-                <li class=" " id="tree-menu-about-history"><a href="/about/history/">History</a></li>
-              </ul>
-            </li>
-            <li class=" " id="tree-menu-blog"><a href="/blog/">Blog</a></li>
-            <li class=" " id="tree-menu-gallery"><a href="/gallery/">Gallery</a></li>
-            <li class=" " id="tree-menu-contact"><a href="/contact/">Contact</a>
-              <ul class="nav nav-list navlist-menu-level-1">
-                <li class=" " id="tree-menu-contact-legals"><a href="/contact/legals/">Legals</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-7 middle">
-        <h2>おめでとうございます！</h2>
-        <p>
-          Mezzanineによって提供されたWebサイトへようこそ。 ここには、クイックスタートのためのリンクが幾つかあります。
-        </p>
-        <ul>
-          <li><a href="/admin/">管理インターフェースにログインする</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">カスタムページタイプの作成</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">HTMLテンプレートの変更</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">ホームページを変更する</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">その他のよくある質問</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">設定の全て</a></li>
-          <li><a href="http://mezzanine.jupo.org/docs/deployment.html">プロダクションサーバ にデプロイする</a></li>
-        </ul>
-      </div>
-      <div class="col-md-3 right">
-        <div class="panel panel-default user-panel">
-          <div class="panel-body">
-          </div>
-        </div>
-        <div class="panel panel-default">
-          <div class="panel-body">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <div class="container">
-      <div class="nav-footer">
-        <ul class="list-unstyled">
-          <li id="footer-menu-about"><a href="/about/">About</a></li>
-          <li id="footer-menu-about-team"><a href="/about/team/">Team</a></li>
-          <li id="footer-menu-about-history"><a href="/about/history/">History</a></li>
-        </ul>
-        <ul class="list-unstyled">
-          <li id="footer-menu-blog"><a href="/blog/">Blog</a></li>
-        </ul>
-        <ul class="list-unstyled">
-          <li id="footer-menu-gallery"><a href="/gallery/">Gallery</a></li>
-        </ul>
-        <ul class="list-unstyled">
-          <li id="footer-menu-contact"><a href="/contact/">Contact</a></li>
-          <li id="footer-menu-contact-legals"><a href="/contact/legals/">Legals</a></li>
-        </ul>
-      </div>
-      <div class="row">
-        <p class="site-info text-center">
-          Powered by
-          <a href="http://mezzanine.jupo.org">Mezzanine</a> and
-          <a href="http://www.djangoproject.com">Django</a>
-          <span class="separator">|</span> Theme by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
-        </p>
-      </div>
-    </div>
-  </footer>
+            <b class="caret"></b></a><ul class="dropdown-menu"><li class=" " id="contact-legals"><a href="/contact/legals/">Legals</a></li></ul></li></ul>
+</div>
+</div>
+</div>
+<div class="container">
+<h1>ホーム</h1>
+<ul class="breadcrumb">
+<li class="active">ホーム</li>
+</ul>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-md-2 left">
+<div class="panel panel-default tree">
+<ul class="nav nav-list navlist-menu-level-0"><li class="active" id="tree-menu-home"><a href="/">ホーム</a></li><li class=" " id="tree-menu-about"><a href="/about/">About</a><ul class="nav nav-list navlist-menu-level-1"><li class=" " id="tree-menu-about-team"><a href="/about/team/">Team</a></li><li class=" " id="tree-menu-about-history"><a href="/about/history/">History</a></li></ul></li><li class=" " id="tree-menu-blog"><a href="/blog/">Blog</a></li><li class=" " id="tree-menu-gallery"><a href="/gallery/">Gallery</a></li><li class=" " id="tree-menu-contact"><a href="/contact/">Contact</a><ul class="nav nav-list navlist-menu-level-1"><li class=" " id="tree-menu-contact-legals"><a href="/contact/legals/">Legals</a></li></ul></li></ul>
+</div>
+</div>
+<div class="col-md-7 middle">
+<h2>おめでとうございます！</h2>
+<p>
+    Mezzanineによって提供されたWebサイトへようこそ。
+    ここには、クイックスタートのためのリンクが幾つかあります。
+</p>
+<ul>
+<li><a href="/admin/">管理インターフェースにログインする</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">カスタムページタイプの作成</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">HTMLテンプレートの変更</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">ホームページを変更する</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">その他のよくある質問</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">設定の全て</a></li>
+<li><a href="http://mezzanine.jupo.org/docs/deployment.html">プロダクションサーバ にデプロイする</a></li>
+</ul>
+</div>
+<div class="col-md-3 right">
+<div class="panel panel-default user-panel">
+<div class="panel-body">
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-body">
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+<div class="container">
+<div class="nav-footer"><ul class="list-unstyled"><li id="footer-menu-about"><a href="/about/">About</a></li><li id="footer-menu-about-team"><a href="/about/team/">Team</a></li><li id="footer-menu-about-history"><a href="/about/history/">History</a></li></ul><ul class="list-unstyled"><li id="footer-menu-blog"><a href="/blog/">Blog</a></li></ul><ul class="list-unstyled"><li id="footer-menu-gallery"><a href="/gallery/">Gallery</a></li></ul><ul class="list-unstyled"><li id="footer-menu-contact"><a href="/contact/">Contact</a></li><li id="footer-menu-contact-legals"><a href="/contact/legals/">Legals</a></li></ul></div>
+<div class="row">
+<p class="site-info text-center">
+    Powered by
+    <a href="http://mezzanine.jupo.org">Mezzanine</a>
+    and
+    <a href="http://www.djangoproject.com">Django</a>
+<span class="separator">|</span>
+    Theme by <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+</p>
+</div>
+</div>
+</footer>
 </body>
-
 </html>

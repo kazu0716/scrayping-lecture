@@ -86,3 +86,5 @@ Quit the server with CONTROL-C.
         - https://qiita.com/kinpira/items/383b0fbee6bf229ea03d
     - Seleniumとは
         - https://codezine.jp/article/detail/10225
+    - ChromeDriverのインストール
+        - brew install chromedriver
