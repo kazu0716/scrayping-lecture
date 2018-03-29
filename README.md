@@ -28,10 +28,10 @@ kazu0716 $ workon
 - victim_appsの起動
 
 ```
-git clone https://github.com/kazu0716/scrayping-lecture.git
-cd scrayping-lecture/victim_apps
-pip install -r requirements.txt
-python manage.py createdb
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ git clone https://github.com/kazu0716/scrayping-lecture.git
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ cd scrayping-lecture/victim_apps
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ pip install -r requirements.txt
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py createdb
 Operations to perform:
   Apply all migrations: admin, auth, blog, conf, contenttypes, core, django_comments, forms, galleries, generic, pages, redirects, sessions, sites, twitter
 Running migrations:
@@ -97,8 +97,8 @@ Creating demo pages: About us, Contact form, Gallery ...
 
 Installed 16 object(s) from 3 fixture(s)
 
-python manage.py runscript create_users
-python manage.py runserver
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py runscript create_users
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py runserver
 .....
 _d^^^^^^^^^b_
 .d''           ``b.
