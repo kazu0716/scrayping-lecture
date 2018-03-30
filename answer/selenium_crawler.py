@@ -29,28 +29,30 @@ def crawler(config):
         driver.set_page_load_timeout(30)
 
         url = config.get('general', 'url')
-        logger.debug("access {}".format(url))
         driver.get(url)
+        logger.debug("access {}".format(url))
         sleep(1)
 
         user_id = config.get('general', 'user_id')
-        logger.debug("input user_id ".format(user_id))
         user = driver.find_element_by_xpath('//*[@id="id_username"]')
         user.send_keys(user_id)
+        logger.debug("input user_id ".format(user_id))
         sleep(1)
 
         password = config.get('general', 'password')
-        logger.debug("input password ".format(password))
         pass_ = driver.find_element_by_xpath('//*[@id="id_password"]')
         pass_.send_keys(password)
+        logger.debug("input password ".format(password))
         sleep(3)
 
-        logger.debug("clicked login button")
         driver.find_element_by_xpath('//*[@id="login-form"]/div[2]/input').click()
+        logger.debug("clicked login button")
         sleep(3)
-        logger.debug("clicked ユーザ")
+
         driver.find_element_by_xpath('//*[@id="side-panel"]/div[1]/ul/li[1]/ul/li[1]/a').click()
+        logger.debug("clicked ユーザ")
         sleep(3)
+
         logger.debug("finished")
 
     except Exception as e:
