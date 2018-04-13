@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
     v.memory = 2048
   end
 
-  config.vm.network :forwarded_port, host: 8888, guest: 8000
+  config.vm.network :forwarded_port, host: 8000, guest: 8000
 
   config.vm.provision 'shell', inline: <<-EOS
     sudo apt-get update
