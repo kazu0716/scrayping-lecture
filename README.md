@@ -1,28 +1,28 @@
 # Crawling & Scraping勉強会(内部向け)
 
 ## 事前準備
-- MacへPython3のインストール(Python 3.6.4想定: 2018/3/27時点)
-    - 参考: http://develtips.com/python/191
-- Macへvirtualenv/virtualenvwrapperのインストール
-    - 参考: http://salinger.github.io/blog/2013/01/16/2/
+- VartualBox Installed
+    - Windows: http://vboxmania.net/content/virtualbox%E3%82%92windows%E3%81%AB%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB
+    - Mac: https://pc-karuma.net/mac-virtualbox-install/
+- Vagrant Install
+    - Windows: https://weblabo.oscasierra.net/install-vagrant-onto-windows/
+    - Mac: https://qiita.com/inouet/items/b36638adc2b5772db457
 - お役立ちライブラリの確認
     - argparse: http://d.hatena.ne.jp/rudi/20100805/1281020304
     - configparser: https://www.python-izm.com/advanced/config_parser/
     - logging: https://qiita.com/amedama/items/b856b2f30c2f38665701
     - TinyDB: https://qiita.com/meznat/items/19cfc3ee2e145d4e5baf
 
-- virtualenv環境の作成
+- VMの起動
 
 ```
-kazu0716 $ mkvirtualenv scrayping_lecture -p python3
-Running virtualenv with interpreter /usr/local/bin/python3
-Using base prefix '/usr/local/Cellar/python/3.6.4_4/Frameworks/Python.framework/Versi
-ons/3.6'
-New python executable in /Users/01021657/.virtualenvs/scrayping_lecture/bin/python3.6
-Also creating executable in /Users/01021657/.virtualenvs/scrayping_lecture/bin/python
-Installing setuptools, pip, wheel...done.
-kazu0716 $ workon
-(scrayping_lecture) kazu0716 $
+# 初回
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ git clone https://github.com/kazu0716/scrayping-lecture.git
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ cd scrayping-lecture/
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ vagrant up
+(scrayping-lecture) kazu0716 MacBook-Pro-4 $ vagrant ssh
+
+# 参考: Vagrantの使い方 : https://qiita.com/skinoshita/items/57ac059ff8b1008f5e1d
 ```
 
 - victim_appsの起動

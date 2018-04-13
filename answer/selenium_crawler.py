@@ -24,7 +24,7 @@ def path(file_name):
 
 def crawler(config):
     try:
-        driver = webdriver.Chrome(desired_capabilities=DesiredCapabilities.CHROME)
+        driver = webdriver.PhantomJS()
         driver.implicitly_wait(30)
         driver.set_page_load_timeout(30)
 
