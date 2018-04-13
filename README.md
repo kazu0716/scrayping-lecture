@@ -16,7 +16,7 @@
 - VMの起動
 
 ```
-# 初回
+# 初回起動方法
 (scrayping-lecture) kazu0716 MacBook-Pro-4 $ git clone https://github.com/kazu0716/scrayping-lecture.git
 (scrayping-lecture) kazu0716 MacBook-Pro-4 $ cd scrayping-lecture/
 (scrayping-lecture) kazu0716 MacBook-Pro-4 $ vagrant up
@@ -28,54 +28,11 @@
 - victim_appsの起動
 
 ```
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ git clone https://github.com/kazu0716/scrayping-lecture.git
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ cd scrayping-lecture/victim_apps
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ pip install -r requirements.txt
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py createdb
-Operations to perform:
-  Apply all migrations: admin, auth, blog, conf, contenttypes, core, django_comments, forms, galleries, generic, pages, redirects, sessions, sites, twitter
-Running migrations:
-  Applying contenttypes.0001_initial... OK
-  Applying auth.0001_initial... OK
-  Applying admin.0001_initial... OK
-  Applying admin.0002_logentry_remove_auto_add... OK
-  Applying contenttypes.0002_remove_content_type_name... OK
-  Applying auth.0002_alter_permission_name_max_length... OK
-  Applying auth.0003_alter_user_email_max_length... OK
-  Applying auth.0004_alter_user_username_opts... OK
-  Applying auth.0005_alter_user_last_login_null... OK
-  Applying auth.0006_require_contenttypes_0002... OK
-  Applying auth.0007_alter_validators_add_error_messages... OK
-  Applying auth.0008_alter_user_username_max_length... OK
-  Applying sites.0001_initial... OK
-  Applying blog.0001_initial... OK
-  Applying blog.0002_auto_20150527_1555... OK
-  Applying conf.0001_initial... OK
-  Applying core.0001_initial... OK
-  Applying core.0002_auto_20150414_2140... OK
-  Applying django_comments.0001_initial... OK
-  Applying django_comments.0002_update_user_email_field_length... OK
-  Applying django_comments.0003_add_submit_date_index... OK
-  Applying pages.0001_initial... OK
-  Applying forms.0001_initial... OK
-  Applying forms.0002_auto_20141227_0224... OK
-  Applying forms.0003_emailfield... OK
-  Applying forms.0004_auto_20150517_0510... OK
-  Applying forms.0005_auto_20151026_1600... OK
-  Applying galleries.0001_initial... OK
-  Applying galleries.0002_auto_20141227_0224... OK
-  Applying generic.0001_initial... OK
-  Applying generic.0002_auto_20141227_0224... OK
-  Applying pages.0002_auto_20141227_0224... OK
-  Applying pages.0003_auto_20150527_1555... OK
-  Applying redirects.0001_initial... OK
-  Applying sessions.0001_initial... OK
-  Applying sites.0002_alter_domain_unique... OK
-  Applying twitter.0001_initial... OK
-
-A site record is required.
-Please enter the domain and optional port in the format 'domain:port'.
-For example 'localhost:8000' or 'www.example.com'.
+01021657 CA2842 $ vagrant ssh
+ubuntu@ubuntu-xenial:~$ cd scrayping-lecture/victim_apps/
+# 下記DBにテーブルを作成&諸々の設定を自動に行う
+ubuntu@ubuntu-xenial:~/scrayping-lecture/victim_apps$ python3 manage.py createdb
+# 省略 #
 Hit enter to use the default (127.0.0.1:8000):
 
 Creating default site record: 127.0.0.1:8000 ...
@@ -83,7 +40,7 @@ Creating default site record: 127.0.0.1:8000 ...
 
 Creating default account ...
 
-Username (leave blank to use 'kazu0716'): admin
+Username (leave blank to use 'ubuntu'):
 Email address: admin@example.com
 Password:
 Password (again):
@@ -96,34 +53,46 @@ Eg: About us, Contact form, Gallery. (yes/no): yes
 Creating demo pages: About us, Contact form, Gallery ...
 
 Installed 16 object(s) from 3 fixture(s)
-
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py runscript create_users
-(scrayping-lecture) kazu0716 MacBook-Pro-4 $ python manage.py runserver
-.....
-_d^^^^^^^^^b_
-.d''           ``b.
-.p'                `q.
-.d'                   `b.
-.d'                     `b.   * Mezzanine 4.2.3
-::                       ::   * Django 1.10.8
-::    M E Z Z A N I N E    ::  * Python 3.6.4
-::                       ::   * SQLite 3.22.0
-`p.                     .q'   * Darwin 16.7.0
-`p.                   .q'
-
-`b.                 .d'
-`q..          ..p'
-^q........p^
-''''
-
-Performing system checks...
-
-System check identified no issues (0 silenced).
-March 27, 2018 - 13:34:13
-Django version 1.10.8, using settings 'vicim_app.settings'
-Starting development server at http://127.0.0.1:8000/
-Quit the server with CONTROL-C.
+# ユーザアカウントを自動作成するScript実行
+ubuntu@ubuntu-xenial:~/scrayping-lecture/victim_apps$ python3 manage.py runscript create_users
+# サーバ起動(Backgroundで実行)
+ubuntu@ubuntu-xenial:~/scrayping-lecture/victim_apps$ nohup python3 manage.py runserver &
+[1] 5332
+ubuntu@ubuntu-xenial:~/scrayping-lecture/victim_apps$ nohup: ignoring input and appending output to 'nohup.out'
+## エラーだとこの後エラーが出る。何もでなければOK
 ```
+
+- answer scriptの実行
+
+```
+ubuntu@ubuntu-xenial:~/scrayping-lecture/answer$ cd/home/ubuntu/scrayping-lecture/answer
+# requestsのレクチャの使い方
+ubuntu@ubuntu-xenial:~/scrayping-lecture/answer$ python3 request_crawler.py -h
+usage: request_crawler.py [-h] -u URL -f FILE_NAME
+
+requests crawler for internal lecture
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u URL, --url URL     access url to want to get web-page as htlm file.
+  -f FILE_NAME, --filename FILE_NAME
+                        filename of output file which got by requetsts access
+# scraperの使い方
+ubuntu@ubuntu-xenial:~/scrayping-lecture/answer$ python3 scraper.py -h
+usage: scraper.py [-h] -f FILE_NAME
+
+scrayping script for internal lecture
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE_NAME, --filename FILE_NAME
+                        filename of input file to get some tags
+# Seleniumの使い方
+ubuntu@ubuntu-xenial:~/scrayping-lecture/answer$ python3 selenium_crawler.py
+```
+
+- Victimの確認
+    - http://127.0.0.1:8000 へブラウザアクセス
 
 ## アジェンダ(1回目)
 ### ゴール: requetstsモジュールを利用し、HTMLが取得できるようになる
@@ -151,5 +120,3 @@ Quit the server with CONTROL-C.
         - https://qiita.com/kinpira/items/383b0fbee6bf229ea03d
     - Seleniumとは
         - https://codezine.jp/article/detail/10225
-    - ChromeDriverのインストール(必須)
-        - brew install chromedriver
