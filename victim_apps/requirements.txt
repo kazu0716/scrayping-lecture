@@ -2,7 +2,7 @@ beautifulsoup4==4.6.0
 bleach==2.1.2
 certifi==2018.1.18
 chardet==3.0.4
-Django==1.10.8
+Django==1.11.28
 django-contrib-comments==1.8.0
 django-extensions==1.9.9
 filebrowser-safe==0.4.7
